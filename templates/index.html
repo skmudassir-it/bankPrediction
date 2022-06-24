@@ -1,0 +1,115 @@
+{% extends 'base.html' %}
+
+{% block head %} 
+<title>Bank Prediction</title>
+{% endblock %}
+
+{% block body %} 
+<h1 style="color:Blue;text-align: center">Bank Marketing Prediction</h1><br>
+<marquee style="color:red"><h3>developed by Mudassir Shaik</h3></marquee>
+<hr>
+<form action '/' method = 'POST' style="text-align: center">
+    <table style="margin-left : 40%">
+        <tr>
+            <td style="text-align:right">
+                <span class="input-group-text" for="age">Age:</span>
+                
+            </td>
+            <td style="text-align:left" >
+                <input type='text' name='age'>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align:right">
+                <span class="input-group-text" for="job">Profession:</span>
+            </td>
+            <td style="text-align:left">
+                <select name="job" id="job">
+                    <option value="0">Unkown</option>
+                    <option value="1">Student</option>
+                    <option value="2">Blue Collar</option>
+                    <option value="3">Entrepreneur</option>
+                    <option value="4">Management</option>
+                    <option value="5">Technician</option>
+                    <option value="6">Housemaid</option>
+                    <option value="7">Unemployed</option>
+                    <option value="8">Self Employed</option>
+                    <option value="9">Admin</option>
+                    <option value="10">Service</option>
+                    <option value="11">Retired</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align:right">
+                <span class="input-group-text" for="sal">Salary:</span>
+            </td>
+            <td style="text-align:left">
+                <input type='text' name='sal'>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align:right">
+                <span class="input-group-text" for="rel">Marital Status:</span>
+            </td>
+            <td style="text-align:left">
+                <select name="relation" id="rel">
+                    <option value="0">Single</option>
+                    <option value="1">Married</option>
+                    <option value="2">Divorced</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align:right">
+                <span class="input-group-text" for="edu">Education:</span>
+            </td>
+            <td style="text-align:left">
+                <select name="edu" id="edu">
+                    <option value="0">Unkown</option>
+                    <option value="1">Primary</option>
+                    <option value="2">Secondary</option>
+                    <option value="3">Tertiary</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align:right">
+                <span class="input-group-text" for='def'>Defaulter</span>
+            </td>
+            <td style="text-align:left">
+                <input type="radio" name="def" id="def_yes" value="1"> Yes </input>
+                <input type="radio" name="def" id="def_no" value="0"> No </input>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align:right">
+                <span class="input-group-text" for='hl'>Housing Loan</span>
+            </td>
+            <td style="text-align:left">
+                <input type="radio" name="hl" id="hl_yes" value="1"> Yes </input>
+                <input type="radio" name="hl" id="hl_no" value="0"> No </input>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align:right">
+                <span class="input-group-text" for='pl'>Personal Loan</span>
+            </td>
+            <td style="text-align:left">
+                <input type="radio" name="pl" id="pl_yes" value="1"> Yes </input>
+                <input type="radio" name="pl" id="pl_no" value="0"> No </input>
+            </td>
+        </tr>
+    </table><br>
+
+    <button type='submit' value='submit'>&emsp;&emsp;Find&emsp;&emsp;</button>
+    <hr>
+    <br>
+</form>
+{% if result == 0 %}
+	<h2 style="color:Orange;text-align: center">This Customer Will Not part of Program</h2>
+{% else %}
+	<h2 style="color:Green;text-align: center">This Customer Will be part of Program</h2>
+{% endif %}
+{% endblock %}
