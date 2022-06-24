@@ -1,0 +1,5 @@
+Flask
+gunicorn==20.1.0
+joblib==0.15.1
+pandas
+scikit-learn
